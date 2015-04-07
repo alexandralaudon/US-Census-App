@@ -1,0 +1,15 @@
+<h1><%= "#{@user.first_name} edit page" %></h1>
+
+<div class="col-md-offset-2 col-md-8">
+
+  <%= form_for @user do |f| %>
+      <%= f.label :state %>
+      <%= f.collection_select :id, State.all, :id, :place_name, {prompt: 'Please select a state...'}, {class:'form-control'} %>
+
+    <div class="form-group">
+      <%= f.submit "Update your page", class:'btn btn-primary' %>
+    </div>
+
+  <% end %>
+
+</div>
