@@ -1,0 +1,37 @@
+<h1>WELL, WELL, WELL....</h1>
+<h3>HAVE I GOT SOMETHING INTERESTING TO SHOW YOU!</h3>
+<h6>Won't you please sign up so I can show you something so revealing about yourself, you'll think it's ruby magic. </h6>
+
+
+<div class="form-group">
+  <% if @user.errors.any? %>
+    <div class="text-danger">
+      <% @user.errors.full_messages.each do |message| %>
+        <h6> <%= message %> </h6>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+
+<div class="well col-md-offset-2 col-md-8">
+
+  <%= form_for @user, url:sign_up_path do |f| %>
+    <div class="form-group">
+      <%= f.label :email, class:'control-label'%>
+      <%= f.email_field :email, class:'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :password %>
+      <%= f.password_field :password, class:'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, class:'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.submit "Sign Up", class:'btn btn-default' %>
+    </div>
+  <% end %>
+
+</div>
