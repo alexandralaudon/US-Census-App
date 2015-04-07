@@ -3,4 +3,8 @@ class User < ActiveRecord::Base
 
   validates :email, presence:true, uniqueness:true
 
+  def first_name
+    "#{email[/[^@]+/]}".titleize
+  end
+
 end
