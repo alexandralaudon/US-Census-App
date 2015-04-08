@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150407235818) do
+ActiveRecord::Schema.define(version: 20150408000815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,18 @@ ActiveRecord::Schema.define(version: 20150407235818) do
     t.decimal "pct_asian"
     t.decimal "pct_nat_haw_oth"
     t.decimal "pct_two_or_more"
+    t.decimal "pct_hisp"
+    t.decimal "pct_non_hisp"
+    t.decimal "pct_non_hisp_white"
+    t.decimal "pct_other"
+    t.decimal "diversity_index"
+    t.decimal "land_sq_mi"
+    t.decimal "water_sq_mi"
+    t.decimal "tot_sq_mi"
+    t.decimal "lat"
+    t.decimal "long"
+    t.integer "housing_units"
+    t.decimal "pct_vacant"
   end
 
   create_table "users", force: :cascade do |t|
