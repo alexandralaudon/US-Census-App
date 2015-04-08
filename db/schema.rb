@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150407232924) do
+ActiveRecord::Schema.define(version: 20150407235818) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,12 @@ ActiveRecord::Schema.define(version: 20150407232924) do
     t.string  "state_postal"
     t.integer "fips"
     t.integer "gnis"
+    t.decimal "pct_white"
+    t.decimal "pct_black"
+    t.decimal "pct_am_ind"
+    t.decimal "pct_asian"
+    t.decimal "pct_nat_haw_oth"
+    t.decimal "pct_two_or_more"
   end
 
   create_table "users", force: :cascade do |t|
