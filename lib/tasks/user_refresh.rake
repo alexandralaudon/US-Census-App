@@ -5,8 +5,8 @@ desc 'Refreshes the user table with 50 new users'
 
     User.destroy_all
 
-    states_array = [*1..51] #51 since we're including Washington DC
-
+    states_array = State.pluck(:id)
+    
     50.times do |user|
       User.create!(email: Faker::Internet.email, password: "password", admin: false, state_id: states_array.sample)
     end

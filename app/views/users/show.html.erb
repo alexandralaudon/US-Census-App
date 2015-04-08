@@ -1,14 +1,58 @@
-<h1><%= "#{@user.first_name} show page" %></h1>
+<h1><%= "#{@user.first_name}'s show page" %></h1>
 
 <h3><%= "Information on #{@user.state.place_name}" %></h3>
 
   <div class="well">
     <div class="form-group">
+      <h5><%= "State Abbreviation: #{@user.state.state_postal}" %></h5>
+    </div>
+
+    <div class="form-group">
       <h5><%= "Population: #{@user.state.pop}" %></h5>
     </div>
 
     <div class="form-group">
-      <h5><%= "Percent Change since 2000: #{@user.state.pct_change}" %></h5>
+      <h5><%= "Percent Hispanic: #{@user.state.pct_hisp*100}%" %></h5>
+    </div>
+
+    <div class="form-group">
+      <h5><%= "Percent Non-Hispacic: #{@user.state.pct_non_hisp*100}%" %></h5>
+    </div>
+
+    <div class="form-group">
+      <h5><%= "Percent White: #{@user.state.pct_white*100}%" %></h5>
+    </div>
+
+    <div class="form-group">
+      <h5><%= "Percent Non-Hispanic-White: #{@user.state.pct_non_hisp_white*100}%" %></h5>
+    </div>
+
+    <div class="form-group">
+      <h5><%= "Percent Black: #{@user.state.pct_black*100}%" %></h5>
+    </div>
+
+    <div class="form-group">
+      <h5><%= "Percent American Indian: #{@user.state.pct_am_ind*100}%" %></h5>
+    </div>
+
+    <div class="form-group">
+      <h5><%= "Percent Asian: #{@user.state.pct_asian*100}%" %></h5>
+    </div>
+
+    <div class="form-group">
+      <h5><%= "Percent Native Hawaiian or other Pacific Islander: #{@user.state.pct_nat_haw_oth*100}%" %></h5>
+    </div>
+
+    <div class="form-group">
+      <h5><%= "Percent Two or More Races: #{@user.state.pct_two_or_more*100}%" %></h5>
+    </div>
+
+    <div class="form-group">
+      <h5><%= "Percent Other: #{@user.state.pct_other*100}%" %></h5>
+    </div>
+
+    <div class="form-group">
+      <h5><%= "Percent Change since 2000: #{@user.state.pct_change*100}%" %></h5>
     </div>
 
     <div class="form-group">
@@ -16,6 +60,35 @@
     </div>
 
     <div class="form-group">
-      <h5><%= "State Abbreviation: #{@user.state.state_postal}" %></h5>
+      <h5><%= "Land per square mile: #{@user.state.land_sq_mi}" %></h5>
     </div>
+
+    <div class="form-group">
+      <h5><%= "Water per square mile: #{@user.state.water_sq_mi}" %></h5>
+    </div>
+
+    <div class="form-group">
+      <h5><%= "Total square miles: #{@user.state.tot_sq_mi}" %></h5>
+    </div>
+
+    <div class="form-group">
+      <h5><%= "Diversity Index: #{@user.state.diversity_index}" %></h5>
+    </div>
+
+    <div class="form-group">
+      <h5><%= "Latitude: #{@user.state.lat}" %></h5>
+    </div>
+
+    <div class="form-group">
+      <h5><%= "Longitude: #{@user.state.long}" %></h5>
+    </div>
+
+    <div class="form-group">
+      <h5><%= "Housing Units: #{@user.state.housing_units}" %></h5>
+    </div>
+
+    <div class="form-group">
+      <h5><%= "Percent Vacant: #{@user.state.pct_vacant*100}%" %></h5>
+    </div>
+
   </div>
