@@ -18,6 +18,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'faker'
 gem 'faraday', '~> 0.9.0'
+gem 'census_api'
 
 group :development, :test do
   gem 'pry'
